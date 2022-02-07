@@ -5,6 +5,7 @@ const Home: NextPage = () => {
     return (
         <div className={styles.container}>
             <h1>홈페이지</h1>
+            <h1 className="text-3xl font-bold underline">Hello world!</h1>
         </div>
     );
 };
