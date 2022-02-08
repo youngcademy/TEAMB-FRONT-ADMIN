@@ -1,6 +1,7 @@
 import React from 'react';
 import AppSidebar from '../components/AppSidebar';
 import AppHeader from '../components/AppHeader';
+import AppFooter from '../components/AppFooter';
 
 import { CContainer } from '@coreui/react';
 
@@ -16,7 +17,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                 fluid
             >
                 <AppHeader />
-                <div className="body flex-grow-1">{children}</div>
+                <div>{children}</div>
+                <AppFooter />
             </CContainer>
         </div>
     );
