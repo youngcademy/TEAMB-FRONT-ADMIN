@@ -5,9 +5,9 @@ import {
     CSidebarNav,
     CNavItem,
     CNavGroup,
-    CSidebarToggler,
     CBadge,
 } from '@coreui/react';
+import Link from 'next/link';
 
 function AppSidebar() {
     return (
@@ -15,7 +15,9 @@ function AppSidebar() {
             <CSidebar>
                 <CSidebarBrand>관리자</CSidebarBrand>
                 <CSidebarNav>
-                    <CNavItem href="#">홈</CNavItem>
+                    <Link href="/" passHref>
+                        <CNavItem href="#">홈</CNavItem>
+                    </Link>
                     <CNavItem href="#">
                         대시보드
                         <CBadge color="primary ms-auto">NEW</CBadge>
@@ -26,7 +28,9 @@ function AppSidebar() {
                         <CNavItem href="#">유저 활성/비활성</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="상품 관리">
-                        <CNavItem href="#">상품 리스트</CNavItem>
+                        <Link href="/items" passHref>
+                            <CNavItem href="#">상품 리스트</CNavItem>
+                        </Link>
                         <CNavItem href="#">상품 등록</CNavItem>
                         <CNavItem href="#">상품 수정/삭제</CNavItem>
                     </CNavGroup>

@@ -7,7 +7,7 @@ function AppFooter() {
             <CFooter>
                 <div>
                     <CLink href="https://coreui.io">CoreUI</CLink>
-                    <span>&copy; 2021 creativeLabs.</span>
+                    <span>&copy; 2022 teamB.</span>
                 </div>
                 <div>
                     <span>Powered by </span>
