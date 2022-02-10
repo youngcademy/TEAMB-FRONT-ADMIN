@@ -35,7 +35,9 @@ function AppSidebar() {
                         <CNavItem href="#">상품 수정/삭제</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="주문 관리">
-                        <CNavItem href="#">주문 리스트</CNavItem>
+                        <Link href="/orderlist" passHref>
+                            <CNavItem href="#">주문 리스트</CNavItem>
+                        </Link>
                         <CNavItem href="#">주문 수정</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="계정 관리">
