@@ -7,10 +7,12 @@ import {
     CTableDataCell,
 } from '@coreui/react';
 import type { NextPage } from 'next';
+import OrderHeader from '../components/OrderHeader';
 
 const OrderList: NextPage = () => {
     return (
         <>
+            <OrderHeader />
             <CTable hover>
                 <CTableHead>
                     <CTableRow>
