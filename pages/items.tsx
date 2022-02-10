@@ -15,6 +15,12 @@ import {
     CRow,
     CCol,
     CFormSelect,
+    CTable,
+    CTableHead,
+    CTableRow,
+    CTableHeaderCell,
+    CTableBody,
+    CTableDataCell,
 } from '@coreui/react';
 import type { NextPage } from 'next';
 
@@ -83,6 +89,91 @@ const List: NextPage = () => {
                         <CButton color="primary">검색</CButton>
                         <CButton color="primary">초기화</CButton>
                     </div>
+                </CCardBody>
+            </CCard>
+            <CCard>
+                <CCardBody>
+                    <CTable>
+                        <CTableHead>
+                            <CTableRow>
+                                <CTableHeaderCell scope="col">
+                                    #
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    상품명
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    컬러
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    브랜드
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    사이즈
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    상품 분류
+                                </CTableHeaderCell>
+                                <CTableHeaderCell scope="col">
+                                    판매 가격
+                                </CTableHeaderCell>
+                            </CTableRow>
+                        </CTableHead>
+                        <CTableBody>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    1
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    핫한 세미와이드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>베이지</CTableDataCell>
+                                <CTableDataCell>귀여운 마녀</CTableDataCell>
+                                <CTableDataCell>26</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>22,000</CTableDataCell>
+                            </CTableRow>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    2
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    멋진 테이퍼드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>블랙</CTableDataCell>
+                                <CTableDataCell>멋진 남자</CTableDataCell>
+                                <CTableDataCell>29</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>28,000</CTableDataCell>
+                            </CTableRow>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    3
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    핫한 세미와이드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>베이지</CTableDataCell>
+                                <CTableDataCell>귀여운 마녀</CTableDataCell>
+                                <CTableDataCell>26</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>22,000</CTableDataCell>
+                            </CTableRow>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    4
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    멋진 테이퍼드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>블랙</CTableDataCell>
+                                <CTableDataCell>멋진 남자</CTableDataCell>
+                                <CTableDataCell>29</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>28,000</CTableDataCell>
+                            </CTableRow>
+                        </CTableBody>
+                    </CTable>
                 </CCardBody>
             </CCard>
         </>
