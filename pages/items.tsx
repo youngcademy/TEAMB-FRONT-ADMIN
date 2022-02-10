@@ -27,7 +27,7 @@ import type { NextPage } from 'next';
 const List: NextPage = () => {
     return (
         <>
-            <CCard>
+            <CCard className="mb-1">
                 <CCardHeader>상품 리스트</CCardHeader>
                 <CCardBody>
                     <CForm>
@@ -87,13 +87,13 @@ const List: NextPage = () => {
                     </CForm>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-center">
                         <CButton color="primary">검색</CButton>
-                        <CButton color="primary">초기화</CButton>
+                        <CButton color="secondary">초기화</CButton>
                     </div>
                 </CCardBody>
             </CCard>
             <CCard>
                 <CCardBody>
-                    <CTable>
+                    <CTable striped>
                         <CTableHead>
                             <CTableRow>
                                 <CTableHeaderCell scope="col">
