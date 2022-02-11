@@ -39,8 +39,11 @@ function AppSidebar() {
                         <CNavItem href="#">주문 수정</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="계정 관리">
-                        <CNavItem href="#">계정 리스트</CNavItem>
-                        <CNavItem href="#">권한 관리</CNavItem>
+                        <CNavItem href="/">계정 리스트</CNavItem>
+                        <CNavItem href="/">정보 권한 관리</CNavItem>
+                    </CNavGroup>
+                    <CNavGroup toggler="어드민 관리">
+                        <CNavItem href="/adminInfo">정보 권한 관리</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="카테고리 관리">
                         <CNavItem href="#">카테고리 리스트</CNavItem>
