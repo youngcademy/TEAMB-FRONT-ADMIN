@@ -172,6 +172,32 @@ const List: NextPage = () => {
                                 <CTableDataCell>슬랙스</CTableDataCell>
                                 <CTableDataCell>28,000</CTableDataCell>
                             </CTableRow>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    3
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    핫한 세미와이드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>베이지</CTableDataCell>
+                                <CTableDataCell>귀여운 마녀</CTableDataCell>
+                                <CTableDataCell>26</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>22,000</CTableDataCell>
+                            </CTableRow>
+                            <CTableRow>
+                                <CTableHeaderCell scope="row">
+                                    4
+                                </CTableHeaderCell>
+                                <CTableDataCell>
+                                    멋진 테이퍼드 슬랙스
+                                </CTableDataCell>
+                                <CTableDataCell>블랙</CTableDataCell>
+                                <CTableDataCell>멋진 남자</CTableDataCell>
+                                <CTableDataCell>29</CTableDataCell>
+                                <CTableDataCell>슬랙스</CTableDataCell>
+                                <CTableDataCell>28,000</CTableDataCell>
+                            </CTableRow>
                         </CTableBody>
                     </CTable>
                 </CCardBody>
