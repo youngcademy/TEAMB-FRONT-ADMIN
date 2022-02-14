@@ -28,7 +28,7 @@ function AppSidebar() {
                         <CNavItem href="#">유저 활성/비활성</CNavItem>
                     </CNavGroup>
                     <CNavGroup toggler="상품 관리">
-                        <Link href="/items" passHref>
+                        <Link href="/items/list" passHref>
                             <CNavItem href="#">상품 리스트</CNavItem>
                         </Link>
                         <CNavItem href="#">상품 등록</CNavItem>
