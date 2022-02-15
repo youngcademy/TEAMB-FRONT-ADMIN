@@ -89,6 +89,13 @@ const Create: NextPage = () => {
                                 컬러
                             </CFormLabel>
                             <CCol>
+                                <CFormSelect aria-label="Default select example">
+                                    <option>컬러 목록</option>
+                                    <option value="1">베이지</option>
+                                    <option value="2">블랙</option>
+                                </CFormSelect>
+                            </CCol>
+                            <CCol>
                                 <CFormInput type="text" />
                             </CCol>
                             <CCol>
@@ -104,6 +111,13 @@ const Create: NextPage = () => {
                             >
                                 사이즈
                             </CFormLabel>
+                            <CCol>
+                                <CFormSelect aria-label="Default select example">
+                                    <option>사이즈 목록</option>
+                                    <option value="1">28</option>
+                                    <option value="2">29</option>
+                                </CFormSelect>
+                            </CCol>
                             <CCol>
                                 <CFormInput type="text" />
                             </CCol>
@@ -136,10 +150,12 @@ const Create: NextPage = () => {
                             </CFormLabel>
                             <CFormTextarea
                                 id="exampleFormControlTextarea1"
-                                rows="3"
+                                rows="10"
                             ></CFormTextarea>
                         </div>
-                        <CButton color="primary">등록</CButton>
+                        <div className="d-grid col-1 mx-auto">
+                            <CButton color="primary">등록</CButton>
+                        </div>
                     </CForm>
                 </CCardBody>
             </CCard>
