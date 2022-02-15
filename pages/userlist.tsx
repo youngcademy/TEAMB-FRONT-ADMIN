@@ -94,7 +94,9 @@ const List: NextPage = () => {
                     </CTable>
                     <div className="d-grid gap-2 d-md-flex justify-content-md-center">
                         <CButton color="primary">검색</CButton>
-                        <CButton color="primary">초기화</CButton>
+                        <CButton color="info" variant="outline">
+                            수정
+                        </CButton>
                     </div>
                 </CCardBody>
             </CCard>
