@@ -39,7 +39,9 @@ export default function OrderHeader() {
                     <CCollapse className="navbar-collapse" visible={visible}>
                         <CNavbarNav>
                             <CNavItem>
-                                <OrderChange />
+                                <CDropdown variant="nav-item" popper={false}>
+                                    <OrderChange />
+                                </CDropdown>
                             </CNavItem>
                             <CDropdown variant="nav-item" popper={false}>
                                 <CDropdownToggle color="secondary">

@@ -9,7 +9,7 @@ import {
 
 export function OrderChange() {
     return (
-        <CDropdown>
+        <CDropdown variant="nav-item" popper={false}>
             <CDropdownToggle>주문상태</CDropdownToggle>
             <CDropdownMenu>
                 <CDropdownItem href="#">입금</CDropdownItem>

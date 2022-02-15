@@ -9,9 +9,10 @@ import {
     CTabContent,
     CTabPane,
     CCardBody,
-    // CCardText,
-    // CCardTitle,
-    // CButton,
+    CCardText,
+    CCardTitle,
+    CButton,
+    CCardFooter,
     CContainer,
     CRow,
     CCol,
@@ -75,7 +76,7 @@ const OrderDetail: NextPage = () => {
                                 </CRow>
                             </CContainer>
                         </CCardHeader>
-                        <CCardBody>
+                        <CCardBody className="text-center">
                             <CTable bordered>
                                 <CTableHead>
                                     <CTableRow>
@@ -105,14 +106,9 @@ const OrderDetail: NextPage = () => {
                                         <CTableDataCell>
                                             <OrderChange />
                                         </CTableDataCell>
-                                    </CTableRow>
-                                    <CTableRow>
-                                        <CTableHeaderCell scope="row">
-                                            의류 사진 상품 이름 옵션: 선택/수량
-                                        </CTableHeaderCell>
-                                        <CTableDataCell>00000원</CTableDataCell>
+                                        <CTableDataCell>0원</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            택배사&송장번호
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -122,6 +118,23 @@ const OrderDetail: NextPage = () => {
                                         <CTableDataCell>00000원</CTableDataCell>
                                         <CTableDataCell>
                                             <OrderChange />
+                                        </CTableDataCell>
+                                        <CTableDataCell>0원</CTableDataCell>
+                                        <CTableDataCell>
+                                            택배사&송장번호
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            의류 사진 상품 이름 옵션: 선택/수량
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>00000원</CTableDataCell>
+                                        <CTableDataCell>
+                                            <OrderChange />
+                                        </CTableDataCell>
+                                        <CTableDataCell>0원</CTableDataCell>
+                                        <CTableDataCell>
+                                            택배사&송장번호
                                         </CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
@@ -134,79 +147,125 @@ const OrderDetail: NextPage = () => {
                     aria-labelledby="결제정보-tab"
                     visible={activeKey === 2}
                 >
-                    <CCard>
-                        <CCardHeader component="h5">
-                            <CContainer>
-                                <CRow>
-                                    <CCol sm="auto">주문번호 123123123</CCol>
-                                    <CCol sm="auto">
-                                        주문일시 2022.01.01 시간
-                                    </CCol>
-                                </CRow>
-                            </CContainer>
-                        </CCardHeader>
+                    <CCard className="text-center">
+                        <CCardHeader>결제 방식 : 신용카드</CCardHeader>
                         <CCardBody>
                             <CTable bordered>
-                                <CTableHead>
-                                    <CTableRow>
-                                        <CTableHeaderCell scope="col">
-                                            주문상품
-                                        </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
-                                            주문금액
-                                        </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
-                                            주문상태
-                                        </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
-                                            주문상태
-                                        </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
-                                            배송비
-                                        </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
-                                            송장번호
-                                        </CTableHeaderCell>
-                                    </CTableRow>
-                                </CTableHead>
                                 <CTableBody>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            의류 사진 상품 이름 옵션: 선택/수량
+                                            총 상품금액
                                         </CTableHeaderCell>
                                         <CTableDataCell>00000원</CTableDataCell>
-                                        <CTableDataCell>
-                                            상태변경
-                                        </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            의류 사진 상품 이름 옵션: 선택/수량
+                                            배송비
                                         </CTableHeaderCell>
-                                        <CTableDataCell>00000원</CTableDataCell>
-                                        <CTableDataCell>
-                                            상태변경
-                                        </CTableDataCell>
+                                        <CTableDataCell>0원</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            의류 사진 상품 이름 옵션: 선택/수량
+                                            총 할인금액
                                         </CTableHeaderCell>
-                                        <CTableDataCell>00000원</CTableDataCell>
-                                        <CTableDataCell>
-                                            상태변경
-                                        </CTableDataCell>
+                                        <CTableDataCell>0000원</CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
                         </CCardBody>
+                        <CCardFooter className="text-medium-emphasis">
+                            최종 결제 금액 : 000000원
+                        </CCardFooter>
+                    </CCard>
+                    <CCard className="text-center">
+                        <CCardHeader>결제 방식 : 무통장 입금</CCardHeader>
+                        <CCardBody>
+                            <CTable bordered>
+                                <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            입금자명
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>이서우</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            임금계좌
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            0000000000000
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            현금영수증
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            방식/번호
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            배송비
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>0원</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            총 할인금액
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>0000원</CTableDataCell>
+                                    </CTableRow>
+                                </CTableBody>
+                            </CTable>
+                        </CCardBody>
+                        <CCardFooter className="text-medium-emphasis">
+                            최종 결제 금액 : 000000원
+                        </CCardFooter>
                     </CCard>
                 </CTabPane>
                 <CTabPane
                     role="tabpanel"
                     aria-labelledby="배송정보-tab"
                     visible={activeKey === 3}
-                ></CTabPane>
+                >
+                    <CCard className="text-center">
+                        <CCardBody>
+                            <CTable bordered>
+                                <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            수령인
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>이서우</CTableDataCell>
+                                        <CTableHeaderCell scope="row">
+                                            전화번호
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            000-0000-0000
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            주소
+                                        </CTableHeaderCell>
+                                        <CTableDataCell colSpan={4}>
+                                            주소 찾기 + 상세 주소
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            요청사항
+                                        </CTableHeaderCell>
+                                        <CTableDataCell
+                                            colSpan={4}
+                                        ></CTableDataCell>
+                                    </CTableRow>
+                                </CTableBody>
+                            </CTable>
+                        </CCardBody>
+                    </CCard>
+                </CTabPane>
             </CTabContent>
         </>
     );
