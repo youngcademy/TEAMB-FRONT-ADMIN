@@ -4,7 +4,7 @@ import { CButton } from '@coreui/react';
 
 export function DetailButton() {
     return (
-        <Link href="/" passHref>
+        <Link href="/orderdetail" passHref>
             <CButton>상세보기</CButton>
         </Link>
     );

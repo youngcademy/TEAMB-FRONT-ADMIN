@@ -19,6 +19,7 @@ import {
     CButton,
     CInputGroup,
 } from '@coreui/react';
+import { DaterPiceker } from './Datepicker';
 
 export default function OrderHeader() {
     const [visible, setVisible] = useState(false);
@@ -65,6 +66,9 @@ export default function OrderHeader() {
                                 </CDropdownMenu>
                             </CDropdown>
                         </CNavbarNav>
+                        <div className="p-3">
+                            <DaterPiceker />
+                        </div>
                         <CInputGroup>
                             <CFormInput
                                 type="search"
