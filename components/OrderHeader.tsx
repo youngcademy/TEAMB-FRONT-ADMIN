@@ -18,8 +18,10 @@ import {
     CFormInput,
     CButton,
     CInputGroup,
+    CNavItem,
 } from '@coreui/react';
 import { DaterPiceker } from './Datepicker';
+import { OrderChange } from './OrderChageButton';
 
 export default function OrderHeader() {
     const [visible, setVisible] = useState(false);
@@ -36,31 +38,20 @@ export default function OrderHeader() {
                     />
                     <CCollapse className="navbar-collapse" visible={visible}>
                         <CNavbarNav>
-                            <CDropdown variant="nav-item" popper={false}>
-                                <CDropdownToggle color="secondary">
-                                    상품상태
-                                </CDropdownToggle>
-                                <CDropdownMenu>
-                                    <CDropdownItem href="#">입금</CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        결제완료
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        상품준비중
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">배송</CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        구매확정
-                                    </CDropdownItem>
-                                </CDropdownMenu>
-                            </CDropdown>
+                            <CNavItem>
+                                <OrderChange />
+                            </CNavItem>
                             <CDropdown variant="nav-item" popper={false}>
                                 <CDropdownToggle color="secondary">
                                     검색항목
                                 </CDropdownToggle>
                                 <CDropdownMenu>
-                                    <CDropdownItem href="#">주문</CDropdownItem>
-                                    <CDropdownItem href="#">상품</CDropdownItem>
+                                    <CDropdownItem href="#">
+                                        주문검색
+                                    </CDropdownItem>
+                                    <CDropdownItem href="#">
+                                        상품검색
+                                    </CDropdownItem>
                                     <CDropdownDivider />
                                     <CDropdownItem href="#">선택</CDropdownItem>
                                 </CDropdownMenu>

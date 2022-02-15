@@ -76,7 +76,7 @@ const OrderList: NextPage = () => {
                         <CTableDataCell>
                             주문일시
                             <div>
-                                <Link href="/orderdetail">
+                                <Link href="/orderdetail" passHref>
                                     <a>주문번호</a>
                                 </Link>
                             </div>
