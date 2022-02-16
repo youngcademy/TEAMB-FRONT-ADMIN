@@ -6,13 +6,22 @@ import {
     CTableBody,
     CTableDataCell,
     CFormCheck,
+    CButton,
 } from '@coreui/react';
 import type { NextPage } from 'next';
 import OrderHeader from '../components/OrderHeader';
-import { DetailButton } from '../components/DetailButton';
+
 import Link from 'next/link';
 
 const OrderList: NextPage = () => {
+    const DetailButton = function () {
+        return (
+            <Link href="/orderdetail" passHref>
+                <CButton>상세보기</CButton>
+            </Link>
+        );
+    };
+
     return (
         <>
             <OrderHeader />
