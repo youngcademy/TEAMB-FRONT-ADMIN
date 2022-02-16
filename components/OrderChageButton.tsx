@@ -12,8 +12,8 @@ export function OrderChange() {
         <CDropdown variant="nav-item" popper={false}>
             <CDropdownToggle>주문상태</CDropdownToggle>
             <CDropdownMenu>
-                <CDropdownItem href="#">입금</CDropdownItem>
-                <CDropdownItem href="#">결제완료</CDropdownItem>
+                <CDropdownItem>입금</CDropdownItem>
+                <CDropdownItem href="/">결제완료</CDropdownItem>
                 <CDropdownItem href="#">상품준비중</CDropdownItem>
                 <CDropdownItem href="#">배송</CDropdownItem>
                 <CDropdownItem href="#">구매확정</CDropdownItem>

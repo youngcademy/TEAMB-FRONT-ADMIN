@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { useState } from 'react';
+import Link from 'next/link';
 import {
     CCard,
     CCardHeader,
@@ -11,7 +12,7 @@ import {
     CCardBody,
     CCardFooter,
     CContainer,
-    CRow,comm
+    CRow,
     CCol,
     CTable,
     CTableHead,
@@ -19,11 +20,39 @@ import {
     CTableHeaderCell,
     CTableBody,
     CTableDataCell,
+    CButton,
+    CFormSelect,
 } from '@coreui/react';
-import { OrderChange } from '../components/OrderChageButton';
+
 // import Link from 'next/link';
 
 const OrderDetail: NextPage = () => {
+    const DetailButton = function () {
+        return (
+            <Link href="/orderdetail" passHref>
+                <CButton>상세보기</CButton>
+            </Link>
+        );
+    };
+
+    const OrderChange = () => {
+        return (
+            <CFormSelect aria-label="Default select example">
+                <option>상태</option>
+                <option value="1">입금</option>
+                <option value="2">결제완료</option>
+                <option value="3">상품준비중</option>
+                <option value="4">배송</option>
+                <option value="5">구매확정</option>
+                <option value="6">취소요청</option>
+                <option value="7">반품요청</option>
+                <option value="8">교환요청</option>
+                <option value="9">환불완료</option>
+                <option value="10">교환완료</option>
+            </CFormSelect>
+        );
+    };
+
     const [activeKey, setActiveKey] = useState(1);
     return (
         <>
