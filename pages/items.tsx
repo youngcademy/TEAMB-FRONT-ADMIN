@@ -26,6 +26,7 @@ const List: NextPage = () => {
                             >
                                 상품명
                             </CFormLabel>
+
                             <CCol>
                                 <CFormInput type="text" />
                             </CCol>
