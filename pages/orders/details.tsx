@@ -23,7 +23,6 @@ import {
     CButton,
     CFormSelect,
 } from '@coreui/react';
-
 // import Link from 'next/link';
 
 const OrderDetail: NextPage = () => {

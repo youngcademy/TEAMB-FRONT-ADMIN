@@ -9,14 +9,14 @@ import {
     CButton,
 } from '@coreui/react';
 import type { NextPage } from 'next';
-import OrderHeader from '../components/OrderHeader';
+import OrderHeader from '../../components/OrderHeader';
 
 import Link from 'next/link';
 
 const OrderList: NextPage = () => {
     const DetailButton = function () {
         return (
-            <Link href="/orderdetail" passHref>
+            <Link href="/orders/details" passHref>
                 <CButton>상세보기</CButton>
             </Link>
         );
