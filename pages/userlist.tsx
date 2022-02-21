@@ -1,173 +1,61 @@
-import {
-    CCard,
-    CCardHeader,
-    CCardBody,
-    CButton,
-    CTable,
-    CTableBody,
-    CTableDataCell,
-    CTableHead,
-    CTableHeaderCell,
-    CTableRow,
-    CFormCheck,
-    CNavbar,
-    CForm,
-    CContainer,
-    CFormInput,
-    CNavbarBrand,
-    CDropdown,
-    CDropdownItem,
-    CDropdownToggle,
-    CDropdownMenu,
-} from '@coreui/react';
-import type { NextPage } from 'next';
+import * as React from 'react';
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
-const List: NextPage = () => {
+const columns: GridColDef[] = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    {
+        field: 'firstName',
+        headerName: 'First name',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'lastName',
+        headerName: 'Last name',
+        width: 150,
+        editable: true,
+    },
+    {
+        field: 'age',
+        headerName: 'Age',
+        type: 'number',
+        width: 110,
+        editable: true,
+    },
+    {
+        field: 'fullName',
+        headerName: 'Full name',
+        description: 'This column has a value getter and is not sortable.',
+        sortable: false,
+        width: 160,
+        valueGetter: (params: GridValueGetterParams) =>
+            `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    },
+];
+
+const rows = [
+    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+    { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+    { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+    { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+    { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+    { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+    { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+    { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+    { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+];
+
+export default function DataGridDemo() {
     return (
-        <>
-            <CCard>
-                <CCardHeader>
-                    <CNavbar colorScheme="light" className="bg-light">
-                        <CContainer fluid>
-                            <CNavbarBrand href="#">유저리스트</CNavbarBrand>
-                            <CDropdown>
-                                <CDropdownToggle href="#" color="warning">
-                                    회원등급
-                                </CDropdownToggle>
-                                <CDropdownMenu>
-                                    <CDropdownItem href="#">
-                                        우수회원
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        기업회원
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        일반회원
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        운영진
-                                    </CDropdownItem>
-                                </CDropdownMenu>
-                            </CDropdown>
-                            <CForm className="d-flex">
-                                <CFormInput
-                                    type="search"
-                                    className="me-2"
-                                    placeholder="Search"
-                                />
-                                <CButton
-                                    type="submit"
-                                    color="success"
-                                    variant="outline"
-                                >
-                                    Search
-                                </CButton>
-                            </CForm>
-                        </CContainer>
-                    </CNavbar>
-                </CCardHeader>
-
-                <CCardBody>
-                    <CTable responsive>
-                        <CTableHead>
-                            <CTableRow>
-                                <CTableHeaderCell scope="col">
-                                    <CFormCheck />
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    이름
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    ID
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    회원유형
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    누적구매액
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    적립금
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    가입일
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    회원등급
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    1:1문의
-                                </CTableHeaderCell>
-                            </CTableRow>
-                        </CTableHead>
-                        <CTableBody>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    <CFormCheck
-                                        inline
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        label="1"
-                                    />
-                                </CTableHeaderCell>
-
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    <CFormCheck
-                                        inline
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        label="2"
-                                    />
-                                </CTableHeaderCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    <CFormCheck
-                                        inline
-                                        id="inlineCheckbox1"
-                                        value="option1"
-                                        label="3"
-                                    />
-                                </CTableHeaderCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                                <CTableDataCell></CTableDataCell>
-                            </CTableRow>
-                        </CTableBody>
-                    </CTable>
-                    <div className="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <CButton color="primary">완료</CButton>
-                        <CButton color="info" variant="outline">
-                            수정
-                        </CButton>
-                    </div>
-                </CCardBody>
-            </CCard>
-        </>
+        <div style={{ height: 400, width: '100%' }}>
+            <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[5]}
+                checkboxSelection
+                disableSelectionOnClick
+            />
+        </div>
     );
-};
-
-export default List;
+}
