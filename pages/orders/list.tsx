@@ -10,7 +10,8 @@ import {
 } from '@coreui/react';
 import type { NextPage } from 'next';
 import OrderHeader from '../../components/OrderHeader';
-
+import Table from '../../components/Datatable';
+import Table1 from '../../components/DataTable1';
 import Link from 'next/link';
 
 const OrderList: NextPage = () => {
@@ -25,6 +26,7 @@ const OrderList: NextPage = () => {
     return (
         <>
             <OrderHeader />
+            <Table1 />
             <CTable hover>
                 <CTableHead>
                     <CTableRow>
@@ -126,6 +128,7 @@ const OrderList: NextPage = () => {
                     </CTableRow>
                 </CTableBody>
             </CTable>
+            <Table />
         </>
     );
 };
