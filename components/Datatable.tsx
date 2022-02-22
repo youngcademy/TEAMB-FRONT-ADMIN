@@ -1,6 +1,11 @@
-import DataTable from 'react-data-table-component';
+import DataTable, { TableColumn } from 'react-data-table-component';
 
-const columns = [
+type DataRow = {
+    title: string;
+    year: string;
+};
+
+const columns: TableColumn<DataRow>[] = [
     {
         name: 'Title',
         selector: (row) => row.title,
@@ -26,6 +31,6 @@ const data = [
     },
 ];
 
-export default function Table() {
+export default function Table(): JSX.Element {
     return <DataTable columns={columns} data={data} />;
 }

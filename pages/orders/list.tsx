@@ -128,7 +128,7 @@ const OrderList: NextPage = () => {
                     </CTableRow>
                 </CTableBody>
             </CTable> */}
-            {/* <Table /> */}
+            <Table />
         </>
     );
 };

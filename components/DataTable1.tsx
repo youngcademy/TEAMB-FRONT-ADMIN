@@ -1,6 +1,5 @@
 import React from 'react';
-
-import DataTable from 'react-data-table-component';
+import DataTable, { TableColumn } from 'react-data-table-component';
 import { CCard, CButton } from '@coreui/react';
 import Link from 'next/link';
 // import SortIcon from '@material-ui/icons/ArrowDownward';
@@ -13,7 +12,15 @@ const DetailButton = function () {
     );
 };
 
-const columns = [
+type DataRow = {
+    ordernumber: string;
+    items: string;
+    name: string;
+    total: string;
+    purchase: string;
+};
+
+const columns: TableColumn<DataRow>[] = [
     {
         name: '주문일시',
         selector: (row) => row.ordernumber,
@@ -61,7 +68,7 @@ const data = [
         ordernumber: '주문번호',
         items: '시계',
         name: '이서우',
-        total: '100,000',
+        total: '100000',
         purchase: '신용카드',
     },
     {
@@ -82,7 +89,7 @@ const data = [
     },
 ];
 
-export default function Table1() {
+export default function Table1(): JSX.Element {
     return (
         <div className="Table1">
             <CCard>
