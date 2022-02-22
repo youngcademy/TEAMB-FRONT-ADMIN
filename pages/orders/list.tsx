@@ -27,7 +27,7 @@ const OrderList: NextPage = () => {
         <>
             <OrderHeader />
             <Table1 />
-            <CTable hover>
+            {/* <CTable hover>
                 <CTableHead>
                     <CTableRow>
                         <CTableHeaderCell scope="col">
@@ -127,8 +127,8 @@ const OrderList: NextPage = () => {
                         </CTableDataCell>
                     </CTableRow>
                 </CTableBody>
-            </CTable>
-            <Table />
+            </CTable> */}
+            {/* <Table /> */}
         </>
     );
 };
