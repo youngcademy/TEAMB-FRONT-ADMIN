@@ -23,13 +23,14 @@ import {
     CTableDataCell,
     CFormTextarea,
 } from '@coreui/react';
+
 import type { NextPage } from 'next';
 
-const Create: NextPage = () => {
+const ID: NextPage = () => {
     return (
         <>
             <CCard className="mb-1">
-                <CCardHeader>상품 등록</CCardHeader>
+                <CCardHeader>상품 수정</CCardHeader>
                 <CCardBody>
                     <CForm>
                         <CRow className="mb-3">
@@ -89,10 +90,7 @@ const Create: NextPage = () => {
                                 컬러
                             </CFormLabel>
                             <CCol>
-                                <CFormSelect
-                                    aria-label="Default select example"
-                                    className=""
-                                >
+                                <CFormSelect aria-label="Default select example">
                                     <option>컬러 목록</option>
                                     <option value="1">베이지</option>
                                     <option value="2">블랙</option>
@@ -166,4 +164,4 @@ const Create: NextPage = () => {
     );
 };
 
-export default Create;
+export default ID;
