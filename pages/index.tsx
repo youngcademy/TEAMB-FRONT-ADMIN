@@ -24,19 +24,7 @@ const Home: NextPage = () => {
             >
                 Decrement
             </button>
-            <button
-                aria-label="Increment value"
-                onClick={() => dispatch(increment())}
-            >
-                Increment
-            </button>
-            <span>{count}</span>
-            <button
-                aria-label="Decrement value"
-                onClick={() => dispatch(decrement())}
-            >
-                Decrement
-            </button>
+
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Repudiandae iste error, maiores minus magnam dignissimos ratione

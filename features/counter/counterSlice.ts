@@ -1,13 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../../app/store';
-import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from './counterSlice';
 
 export interface CounterState {
     value: number;
 }
-const count = useSelector((state: RootState) => state.counter.value);
-const dispatch = useDispatch();
+
 const initialState: CounterState = {
     value: 0,
 };
