@@ -1,133 +1,121 @@
-// import {
-//     CTable,
-//     CTableHead,
-//     CTableRow,
-//     CTableHeaderCell,
-//     CTableBody,
-//     CTableDataCell,
-//     CFormCheck,
-//     CButton,
-// } from '@coreui/react';
+import {
+    // CTable,
+    // CTableHead,
+    // CTableRow,
+    // CTableHeaderCell,
+    // CTableBody,
+    // CTableDataCell,
+    // CFormCheck,
+    CButton,
+    CCard,
+} from '@coreui/react';
 import type { NextPage } from 'next';
 import OrderHeader from '../../components/OrderHeader';
+import DataTable, { TableColumn } from 'react-data-table-component';
 import Table from '../../components/Datatable';
-import Table1 from '../../components/DataTable1';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 const OrderList: NextPage = () => {
-    // const DetailButton = function () {
-    //     return (
-    //         <Link href="/orders/details" passHref>
-    //             <CButton>상세보기</CButton>
-    //         </Link>
-    //     );
-    // };
+    const DetailButton = function () {
+        return (
+            <Link href="/orders/details" passHref>
+                <CButton>상세보기</CButton>
+            </Link>
+        );
+    };
 
+    type DataRow = {
+        ordernumber: string;
+        items: string;
+        name: string;
+        total: string;
+        purchase: string;
+    };
+
+    const columns: TableColumn<DataRow>[] = [
+        {
+            name: '주문일시',
+            selector: (row) => row.ordernumber,
+            sortable: true,
+        },
+        {
+            name: '주문상품',
+            selector: (row) => row.items,
+            sortable: true,
+        },
+        {
+            name: '주문자/수령인',
+            selector: (row) => row.name,
+            sortable: true,
+            // right: true,
+        },
+        {
+            name: '주문금액/배송비',
+            selector: (row) => row.total,
+            sortable: true,
+        },
+        {
+            name: '결제방식',
+            selector: (row) => row.purchase,
+            sortable: true,
+        },
+        {
+            name: '상세보기',
+            button: true,
+            cell: () => <DetailButton />,
+        },
+    ];
+
+    const data = [
+        {
+            id: 1,
+            ordernumber: '주문번호',
+            items: '티셔츠',
+            name: '이서우',
+            total: '10000',
+            purchase: '신용카드',
+        },
+        {
+            id: 2,
+            ordernumber: '주문번호',
+            items: '시계',
+            name: '이서우',
+            total: '100000',
+            purchase: '신용카드',
+        },
+        {
+            id: 3,
+            ordernumber: '주문번호',
+            items: '바지',
+            name: '이서우',
+            total: '20000',
+            purchase: '신용카드',
+        },
+        {
+            id: 4,
+            ordernumber: '주문번호',
+            items: '모자',
+            name: '이서우',
+            total: '5000',
+            purchase: '현금',
+        },
+    ];
     return (
         <>
             <OrderHeader />
-            <Table1 />
-            {/* <CTable hover>
-                <CTableHead>
-                    <CTableRow>
-                        <CTableHeaderCell scope="col">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            주문일시
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            주문상품
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            주문자/수령인
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            주문금액/배송비
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            결제방식
-                        </CTableHeaderCell>
-                        <CTableHeaderCell scope="col">
-                            상세보기
-                        </CTableHeaderCell>
-                    </CTableRow>
-                </CTableHead>
-                <CTableBody>
-                    <CTableRow>
-                        <CTableHeaderCell scope="row">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableDataCell>주문번호</CTableDataCell>
-                        <CTableDataCell>줄무늬 티셔츠 외 3건</CTableDataCell>
-                        <CTableDataCell>이서우</CTableDataCell>
-                        <CTableDataCell>123,456원/무료</CTableDataCell>
-                        <CTableDataCell>신용카드</CTableDataCell>
-                        <CTableDataCell>
-                            <DetailButton />
-                        </CTableDataCell>
-                    </CTableRow>
-                    <CTableRow>
-                        <CTableHeaderCell scope="row">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableDataCell>주문번호</CTableDataCell>
-                        <CTableDataCell>줄무늬 티셔츠 외 3건</CTableDataCell>
-                        <CTableDataCell>이서우</CTableDataCell>
-                        <CTableDataCell>123,456원/무료</CTableDataCell>
-                        <CTableDataCell>신용카드</CTableDataCell>
-                        <CTableDataCell>
-                            <DetailButton />
-                        </CTableDataCell>
-                    </CTableRow>
-                    <CTableRow>
-                        <CTableHeaderCell scope="row">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableDataCell>
-                            주문일시
-                            <div>
-                                <Link href="/orderdetail" passHref>
-                                    <a>주문번호</a>
-                                </Link>
-                            </div>
-                        </CTableDataCell>
-                        <CTableDataCell>줄무늬 티셔츠 외 3건</CTableDataCell>
-                        <CTableDataCell>이서우</CTableDataCell>
-                        <CTableDataCell>123,456원/무료</CTableDataCell>
-                        <CTableDataCell>신용카드</CTableDataCell>
-                        <CTableDataCell>
-                            <DetailButton />
-                        </CTableDataCell>
-                    </CTableRow>
-                    <CTableRow>
-                        <CTableHeaderCell scope="row">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableDataCell>주문번호</CTableDataCell>
-                        <CTableDataCell>줄무늬 티셔츠 외 3건</CTableDataCell>
-                        <CTableDataCell>이서우</CTableDataCell>
-                        <CTableDataCell>123,456원/무료</CTableDataCell>
-                        <CTableDataCell>신용카드</CTableDataCell>
-                        <CTableDataCell>
-                            <DetailButton />
-                        </CTableDataCell>
-                    </CTableRow>
-                    <CTableRow>
-                        <CTableHeaderCell scope="row">
-                            <CFormCheck />
-                        </CTableHeaderCell>
-                        <CTableDataCell>주문번호</CTableDataCell>
-                        <CTableDataCell>줄무늬 티셔츠 외 3건</CTableDataCell>
-                        <CTableDataCell>이서우</CTableDataCell>
-                        <CTableDataCell>123,456원/무료</CTableDataCell>
-                        <CTableDataCell>신용카드</CTableDataCell>
-                        <CTableDataCell>
-                            <DetailButton />
-                        </CTableDataCell>
-                    </CTableRow>
-                </CTableBody>
-            </CTable> */}
+            <div className="Table1">
+                <CCard>
+                    <DataTable
+                        title="Movies"
+                        columns={columns}
+                        data={data}
+                        defaultSortFieldId="title"
+                        // sortIcon={<SortIcon />}
+                        pagination
+                        selectableRows
+                    />
+                </CCard>
+            </div>
             <Table />
         </>
     );

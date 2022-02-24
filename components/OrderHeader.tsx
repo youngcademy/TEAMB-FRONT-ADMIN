@@ -20,7 +20,7 @@ import {
     CInputGroup,
     CNavItem,
 } from '@coreui/react';
-import { DaterPiceker } from './Datepicker';
+
 import { OrderChange } from './OrderChageButton';
 
 export default function OrderHeader() {
@@ -59,9 +59,6 @@ export default function OrderHeader() {
                                 </CDropdownMenu>
                             </CDropdown>
                         </CNavbarNav>
-                        <div className="p-3">
-                            <DaterPiceker />
-                        </div>
                         <CInputGroup>
                             <CFormInput
                                 type="search"
