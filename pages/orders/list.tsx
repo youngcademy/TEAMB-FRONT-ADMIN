@@ -1,27 +1,27 @@
-import {
-    CTable,
-    CTableHead,
-    CTableRow,
-    CTableHeaderCell,
-    CTableBody,
-    CTableDataCell,
-    CFormCheck,
-    CButton,
-} from '@coreui/react';
+// import {
+//     CTable,
+//     CTableHead,
+//     CTableRow,
+//     CTableHeaderCell,
+//     CTableBody,
+//     CTableDataCell,
+//     CFormCheck,
+//     CButton,
+// } from '@coreui/react';
 import type { NextPage } from 'next';
 import OrderHeader from '../../components/OrderHeader';
 import Table from '../../components/Datatable';
 import Table1 from '../../components/DataTable1';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const OrderList: NextPage = () => {
-    const DetailButton = function () {
-        return (
-            <Link href="/orders/details" passHref>
-                <CButton>상세보기</CButton>
-            </Link>
-        );
-    };
+    // const DetailButton = function () {
+    //     return (
+    //         <Link href="/orders/details" passHref>
+    //             <CButton>상세보기</CButton>
+    //         </Link>
+    //     );
+    // };
 
     return (
         <>
