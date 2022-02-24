@@ -22,7 +22,85 @@ import {
     CTableBody,
     CTableDataCell,
 } from '@coreui/react';
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+
 import type { NextPage } from 'next';
+
+const columns: GridColDef[] = [
+    { field: 'id', headerName: 'ID', width: 70 },
+    { field: 'name', headerName: '상품명', width: 400 },
+    { field: 'color', headerName: '컬러', width: 150 },
+    { field: 'brand', headerName: '브랜드', width: 250 },
+    { field: 'size', headerName: '사이즈', width: 150 },
+    { field: 'category', headerName: '카테고리', width: 150 },
+    { field: 'price', headerName: '가격', width: 150, type: 'number' },
+];
+
+const rows = [
+    {
+        id: 1,
+        name: '핫한 세미와이드 슬랙스',
+        color: '베이지',
+        brand: '귀여운 마녀',
+        size: '26',
+        category: '슬랙스',
+        price: 22000,
+    },
+    {
+        id: 2,
+        name: '멋진 테이퍼드 슬랙스',
+        color: '블랙',
+        brand: '멋진 남자',
+        size: '29',
+        category: '슬랙스',
+        price: 28000,
+    },
+    {
+        id: 3,
+        name: '핫한 세미와이드 슬랙스',
+        color: '베이지',
+        brand: '귀여운 마녀',
+        size: '26',
+        category: '슬랙스',
+        price: 22000,
+    },
+    {
+        id: 4,
+        name: '멋진 테이퍼드 슬랙스',
+        color: '블랙',
+        brand: '멋진 남자',
+        size: '29',
+        category: '슬랙스',
+        price: 28000,
+    },
+    {
+        id: 5,
+        name: '핫한 세미와이드 슬랙스',
+        color: '베이지',
+        brand: '귀여운 마녀',
+        size: '26',
+        category: '슬랙스',
+        price: 22000,
+    },
+    {
+        id: 6,
+        name: '멋진 테이퍼드 슬랙스',
+        color: '블랙',
+        brand: '멋진 남자',
+        size: '29',
+        category: '슬랙스',
+        price: 28000,
+    },
+    {
+        id: 7,
+        name: '핫한 세미와이드 슬랙스',
+        color: '베이지',
+        brand: '귀여운 마녀',
+        size: '26',
+        category: '슬랙스',
+        price: 22000,
+    },
+];
 
 const List: NextPage = () => {
     return (
@@ -93,113 +171,15 @@ const List: NextPage = () => {
             </CCard>
             <CCard>
                 <CCardBody>
-                    <CTable striped>
-                        <CTableHead>
-                            <CTableRow>
-                                <CTableHeaderCell scope="col">
-                                    #
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    상품명
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    컬러
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    브랜드
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    사이즈
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    상품 분류
-                                </CTableHeaderCell>
-                                <CTableHeaderCell scope="col">
-                                    판매 가격
-                                </CTableHeaderCell>
-                            </CTableRow>
-                        </CTableHead>
-                        <CTableBody>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    1
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    핫한 세미와이드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>베이지</CTableDataCell>
-                                <CTableDataCell>귀여운 마녀</CTableDataCell>
-                                <CTableDataCell>26</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>22,000</CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    2
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    멋진 테이퍼드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>블랙</CTableDataCell>
-                                <CTableDataCell>멋진 남자</CTableDataCell>
-                                <CTableDataCell>29</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>28,000</CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    3
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    핫한 세미와이드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>베이지</CTableDataCell>
-                                <CTableDataCell>귀여운 마녀</CTableDataCell>
-                                <CTableDataCell>26</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>22,000</CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    4
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    멋진 테이퍼드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>블랙</CTableDataCell>
-                                <CTableDataCell>멋진 남자</CTableDataCell>
-                                <CTableDataCell>29</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>28,000</CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    3
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    핫한 세미와이드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>베이지</CTableDataCell>
-                                <CTableDataCell>귀여운 마녀</CTableDataCell>
-                                <CTableDataCell>26</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>22,000</CTableDataCell>
-                            </CTableRow>
-                            <CTableRow>
-                                <CTableHeaderCell scope="row">
-                                    4
-                                </CTableHeaderCell>
-                                <CTableDataCell>
-                                    멋진 테이퍼드 슬랙스
-                                </CTableDataCell>
-                                <CTableDataCell>블랙</CTableDataCell>
-                                <CTableDataCell>멋진 남자</CTableDataCell>
-                                <CTableDataCell>29</CTableDataCell>
-                                <CTableDataCell>슬랙스</CTableDataCell>
-                                <CTableDataCell>28,000</CTableDataCell>
-                            </CTableRow>
-                        </CTableBody>
-                    </CTable>
+                    <div style={{ height: 400, width: '100%' }}>
+                        <DataGrid
+                            rows={rows}
+                            columns={columns}
+                            pageSize={5}
+                            rowsPerPageOptions={[5]}
+                            checkboxSelection
+                        />
+                    </div>
                 </CCardBody>
             </CCard>
         </>
