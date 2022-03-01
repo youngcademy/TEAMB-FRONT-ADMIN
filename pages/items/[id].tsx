@@ -22,9 +22,12 @@ import {
     CTableBody,
     CTableDataCell,
     CFormTextarea,
+    CCardImage,
+    CCardFooter,
 } from '@coreui/react';
 
 import type { NextPage } from 'next';
+import Image from 'next/image';
 
 const ID: NextPage = () => {
     return (
@@ -32,114 +35,154 @@ const ID: NextPage = () => {
             <CCard className="mb-1">
                 <CCardHeader>상품 수정</CCardHeader>
                 <CCardBody>
-                    <CForm>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                이미지 선택
-                            </CFormLabel>
-                            <CCol>
-                                <CFormInput type="file" id="formFile" />
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                상품명
-                            </CFormLabel>
-                            <CCol>
-                                <CFormInput type="text" />
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                브랜드
-                            </CFormLabel>
-                            <CCol>
-                                <CFormInput type="text" />
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                상품 분류
-                            </CFormLabel>
-                            <CCol>
-                                <CFormSelect aria-label="Default select example">
-                                    <option>선택하세요</option>
-                                    <option value="1">상의</option>
-                                    <option value="2">하의</option>
-                                    <option value="3">아우터</option>
-                                </CFormSelect>
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                컬러
-                            </CFormLabel>
-                            <CCol>
-                                <CFormSelect aria-label="Default select example">
-                                    <option>컬러 목록</option>
-                                    <option value="1">베이지</option>
-                                    <option value="2">블랙</option>
-                                </CFormSelect>
-                            </CCol>
-                            <CCol>
-                                <CFormInput type="text" />
-                            </CCol>
-                            <CCol>
-                                <CButton color="primary" variant="outline">
-                                    추가
-                                </CButton>
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                사이즈
-                            </CFormLabel>
-                            <CCol>
-                                <CFormSelect aria-label="Default select example">
-                                    <option>사이즈 목록</option>
-                                    <option value="1">28</option>
-                                    <option value="2">29</option>
-                                </CFormSelect>
-                            </CCol>
-                            <CCol>
-                                <CFormInput type="text" />
-                            </CCol>
-                            <CCol>
-                                <CButton color="primary" variant="outline">
-                                    추가
-                                </CButton>
-                            </CCol>
-                        </CRow>
-                        <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
-                                판매 가격
-                            </CFormLabel>
-                            <CCol>
-                                <CFormInput type="text" />
-                            </CCol>
-                        </CRow>
-                    </CForm>
+                    <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 2 }}>
+                        <CCol xs>
+                            <Image
+                                src="/pants.jpg"
+                                layout="responsive"
+                                width={500}
+                                height={500}
+                                alt=""
+                            />
+                        </CCol>
+                        <CCol xs>
+                            <CCard>
+                                <CCardBody>
+                                    <CForm>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                이미지 선택
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormInput
+                                                    type="file"
+                                                    id="formFile"
+                                                />
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                상품명
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormInput type="text" />
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                브랜드
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormInput type="text" />
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                상품 분류
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormSelect aria-label="Default select example">
+                                                    <option>선택하세요</option>
+                                                    <option value="1">
+                                                        상의
+                                                    </option>
+                                                    <option value="2">
+                                                        하의
+                                                    </option>
+                                                    <option value="3">
+                                                        아우터
+                                                    </option>
+                                                </CFormSelect>
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                컬러
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormSelect aria-label="Default select example">
+                                                    <option>컬러 목록</option>
+                                                    <option value="1">
+                                                        베이지
+                                                    </option>
+                                                    <option value="2">
+                                                        블랙
+                                                    </option>
+                                                </CFormSelect>
+                                            </CCol>
+                                            <CCol>
+                                                <CFormInput type="text" />
+                                            </CCol>
+                                            <CCol>
+                                                <CButton
+                                                    color="primary"
+                                                    variant="outline"
+                                                >
+                                                    추가
+                                                </CButton>
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                사이즈
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormSelect aria-label="Default select example">
+                                                    <option>사이즈 목록</option>
+                                                    <option value="1">
+                                                        28
+                                                    </option>
+                                                    <option value="2">
+                                                        29
+                                                    </option>
+                                                </CFormSelect>
+                                            </CCol>
+                                            <CCol>
+                                                <CFormInput type="text" />
+                                            </CCol>
+                                            <CCol>
+                                                <CButton
+                                                    color="primary"
+                                                    variant="outline"
+                                                >
+                                                    추가
+                                                </CButton>
+                                            </CCol>
+                                        </CRow>
+                                        <CRow className="mb-3">
+                                            <CFormLabel
+                                                htmlFor="inputEmail3"
+                                                className="col-sm-2 col-form-label"
+                                            >
+                                                판매 가격
+                                            </CFormLabel>
+                                            <CCol>
+                                                <CFormInput type="text" />
+                                            </CCol>
+                                        </CRow>
+                                    </CForm>
+                                </CCardBody>
+                            </CCard>
+                        </CCol>
+                    </CRow>
                 </CCardBody>
             </CCard>
             <CCard className="mb-1">
