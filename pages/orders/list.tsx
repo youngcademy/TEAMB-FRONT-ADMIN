@@ -1,18 +1,7 @@
-import {
-    // CTable,
-    // CTableHead,
-    // CTableRow,
-    // CTableHeaderCell,
-    // CTableBody,
-    // CTableDataCell,
-    // CFormCheck,
-    CButton,
-    CCard,
-} from '@coreui/react';
+import { CButton, CCard } from '@coreui/react';
 import type { NextPage } from 'next';
 import OrderHeader from '../../components/OrderHeader';
 import DataTable, { TableColumn } from 'react-data-table-component';
-import Table from '../../components/Datatable';
 import Link from 'next/link';
 
 const OrderList: NextPage = () => {
@@ -116,7 +105,6 @@ const OrderList: NextPage = () => {
                     />
                 </CCard>
             </div>
-            <Table />
         </>
     );
 };

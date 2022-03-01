@@ -10,20 +10,35 @@ import {
     CNavbarNav,
     // CNavLink,
     CDropdown,
-    CDropdownMenu,
-    CDropdownToggle,
-    CDropdownItem,
-    CDropdownDivider,
-    // CForm,
+    // CDropdownMenu,
+    // CDropdownToggle,
+    // CDropdownItem,
+    // CDropdownDivider,
+    CFormSelect,
     CFormInput,
     CButton,
     CInputGroup,
     CNavItem,
 } from '@coreui/react';
 
-import { OrderChange } from './OrderChageButton';
-
 export default function OrderHeader() {
+    const OrderChange = () => {
+        return (
+            <CFormSelect aria-label="Default select example">
+                <option>상태</option>
+                <option value="1">입금</option>
+                <option value="2">결제완료</option>
+                <option value="3">상품준비중</option>
+                <option value="4">배송</option>
+                <option value="5">구매확정</option>
+                <option value="6">취소요청</option>
+                <option value="7">반품요청</option>
+                <option value="8">교환요청</option>
+                <option value="9">환불완료</option>
+                <option value="10">교환완료</option>
+            </CFormSelect>
+        );
+    };
     const [visible, setVisible] = useState(false);
 
     return (
@@ -43,21 +58,11 @@ export default function OrderHeader() {
                                     <OrderChange />
                                 </CDropdown>
                             </CNavItem>
-                            <CDropdown variant="nav-item" popper={false}>
-                                <CDropdownToggle color="secondary">
-                                    검색항목
-                                </CDropdownToggle>
-                                <CDropdownMenu>
-                                    <CDropdownItem href="#">
-                                        주문검색
-                                    </CDropdownItem>
-                                    <CDropdownItem href="#">
-                                        상품검색
-                                    </CDropdownItem>
-                                    <CDropdownDivider />
-                                    <CDropdownItem href="#">선택</CDropdownItem>
-                                </CDropdownMenu>
-                            </CDropdown>
+                            <CFormSelect aria-label="Default select example">
+                                <option>검색항목</option>
+                                <option value="1">주문검색</option>
+                                <option value="2">상품검색</option>
+                            </CFormSelect>
                         </CNavbarNav>
                         <CInputGroup>
                             <CFormInput
