@@ -26,8 +26,9 @@ function AppSidebar() {
                         <Link href="/userlist" passHref>
                             <CNavItem href="#">유저 리스트</CNavItem>
                         </Link>
-                        <CNavItem href="#">유저 등록</CNavItem>
-                        <CNavItem href="#">유저 수정/삭제</CNavItem>
+                        <Link href="/userlistad" passHref>
+                            <CNavItem href="#">유저 관리자 페이지</CNavItem>
+                        </Link>
                     </CNavGroup>
                     <CNavGroup toggler="상품 관리">
                         <Link href="/items" passHref>

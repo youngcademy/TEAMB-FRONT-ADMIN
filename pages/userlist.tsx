@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'No', width: 90 },
@@ -36,7 +36,7 @@ const rows = [
     { id: 3, ID: 'Lannister', Name: 'Jaime', Total: 45000, Grade: '일반' },
     { id: 4, ID: 'Stark', Name: 'Arya', Total: 16000, Grade: '기업' },
     { id: 5, ID: 'Targaryen', Name: 'Daenerys', Total: null, Grade: '신규' },
-    { id: 6, ID: 'Melisandre', Name: null, Total: 150000, Grade: '일반' },
+    { id: 6, ID: 'Melisandre', Name: null, Total: 150000, Grade: '신규' },
     { id: 7, ID: 'Clifford', Name: 'Ferrara', Total: 44000, Grade: '일반' },
     { id: 8, ID: 'Frances', Name: 'Rossini', Total: 36000, Grade: '기업' },
     { id: 9, ID: 'Roxie', firstName: 'Harvey', Total: 65000, Grade: '일반' },
