@@ -24,15 +24,7 @@ import {
     CFormSelect,
 } from '@coreui/react';
 
-const OrderDetail: NextPage = () => {
-    const DetailButton = function () {
-        return (
-            <Link href="/orderdetail" passHref>
-                <CButton>상세보기</CButton>
-            </Link>
-        );
-    };
-
+const Cancel: NextPage = () => {
     const OrderChange = () => {
         return (
             <CFormSelect aria-label="Default select example">
@@ -129,10 +121,7 @@ const OrderDetail: NextPage = () => {
                                         <CTableDataCell>00000원</CTableDataCell>
                                         <CTableDataCell>
                                             <OrderChange />
-                                            <Link
-                                                href="/orders/cancel"
-                                                passHref
-                                            >
+                                            <Link href="/orderdetail">
                                                 <a>취소</a>
                                             </Link>
                                         </CTableDataCell>
@@ -310,4 +299,4 @@ const OrderDetail: NextPage = () => {
     );
 };
 
-export default OrderDetail;
+export default Cancel;
