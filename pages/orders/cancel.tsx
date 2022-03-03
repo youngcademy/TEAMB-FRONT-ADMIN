@@ -25,20 +25,15 @@ import {
 } from '@coreui/react';
 
 const Cancel: NextPage = () => {
-    const OrderChange = () => {
+    const CancelReason = () => {
         return (
             <CFormSelect aria-label="Default select example">
-                <option>상태</option>
-                <option value="1">입금</option>
-                <option value="2">결제완료</option>
-                <option value="3">상품준비중</option>
-                <option value="4">배송</option>
-                <option value="5">구매확정</option>
-                <option value="6">취소요청</option>
-                <option value="7">반품요청</option>
-                <option value="8">교환요청</option>
-                <option value="9">환불완료</option>
-                <option value="10">교환완료</option>
+                <option>사유</option>
+                <option value="1">단순변심</option>
+                <option value="2">상품불량/파손</option>
+                <option value="3">배송지연</option>
+                <option value="4">상품품절</option>
+                <option value="5">기타</option>
             </CFormSelect>
         );
     };
@@ -123,7 +118,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -138,7 +133,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -153,10 +148,85 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
+                            </CTable>
+                        </CCardBody>
+                    </CCard>
+                    <CCard>
+                        <CCardHeader component="h5">취소 금액</CCardHeader>
+                        <CCardBody className="text-center">
+                            <CTable bordered>
+                                <CTableHead>
+                                    <CTableRow>
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={8}
+                                        >
+                                            취소금액
+                                        </CTableHeaderCell>
+                                    </CTableRow>
+                                </CTableHead>
+                                <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            취소상품금액
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>500</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            취소금액합계
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>1000</CTableDataCell>
+                                    </CTableRow>
+                                </CTableBody>
+                            </CTable>
+                            <CTable bordered>
+                                <CTableHead>
+                                    <CTableRow>
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={8}
+                                        >
+                                            변경금액
+                                        </CTableHeaderCell>
+                                    </CTableRow>
+                                </CTableHead>
+                                <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            할인금액 변경
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>-0</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            배송비 변경
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>-0</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            할인금액 변경
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>-0</CTableDataCell>
+                                    </CTableRow>
+                                </CTableBody>
+                            </CTable>
+                            <CTable bordered>
+                                <CTableHead>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="col">
+                                            재계산합계
+                                        </CTableHeaderCell>
+                                        <CTableHeaderCell scope="col">
+                                            1000
+                                        </CTableHeaderCell>
+                                    </CTableRow>
+                                </CTableHead>
                             </CTable>
                             <CButton>수정</CButton>
                         </CCardBody>
@@ -209,7 +279,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -224,7 +294,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -239,12 +309,11 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
-                            <CButton>수정</CButton>
                         </CCardBody>
                     </CCard>
                 </CTabPane>
@@ -295,7 +364,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -310,7 +379,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
@@ -325,7 +394,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>500</CTableDataCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                         <CTableDataCell>
-                                            <OrderChange />
+                                            <CancelReason />
                                         </CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
