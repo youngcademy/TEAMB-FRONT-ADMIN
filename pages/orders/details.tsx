@@ -162,8 +162,17 @@ const OrderDetail: NextPage = () => {
                                             택배사&송장번호
                                         </CTableDataCell>
                                     </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            관리자메모
+                                        </CTableHeaderCell>
+                                        <CTableDataCell
+                                            colSpan={4}
+                                        ></CTableDataCell>
+                                    </CTableRow>
                                 </CTableBody>
                             </CTable>
+                            <CButton>수정</CButton>
                         </CCardBody>
                     </CCard>
                 </CTabPane>
