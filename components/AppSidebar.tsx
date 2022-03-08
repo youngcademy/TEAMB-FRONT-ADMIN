@@ -23,9 +23,12 @@ function AppSidebar() {
                         <CBadge color="primary ms-auto">NEW</CBadge>
                     </CNavItem>
                     <CNavGroup toggler="유저 관리">
-                        <CNavItem href="#">유저 리스트</CNavItem>
-                        <CNavItem href="#">유저 수정</CNavItem>
-                        <CNavItem href="#">유저 활성/비활성</CNavItem>
+                        <Link href="/userlist" passHref>
+                            <CNavItem href="#">유저 리스트</CNavItem>
+                        </Link>
+                        <Link href="/userlistad" passHref>
+                            <CNavItem href="#">유저 관리자 페이지</CNavItem>
+                        </Link>
                     </CNavGroup>
                     <CNavGroup toggler="상품 관리">
                         <Link href="/items/list" passHref>
