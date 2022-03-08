@@ -4,10 +4,6 @@ import { RootState } from '../app/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from '../features/counter/counterSlice';
 
-import { RootState } from '../app/store';
-import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from '../features/counter/counterSlice';
-
 const Home: NextPage = () => {
     const count = useSelector((state: RootState) => state.counter.value);
     const dispatch = useDispatch();
