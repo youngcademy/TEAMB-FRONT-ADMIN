@@ -77,13 +77,19 @@ const Cancel: NextPage = () => {
                     aria-labelledby="취소-tab"
                     visible={activeKey === 1}
                 >
-                    <CCard>
-                        <CCardHeader component="h5">
-                            취소상품 - 취소번호, 주문번호
-                        </CCardHeader>
+                    <CCard className="text-center">
                         <CCardBody className="text-center">
                             <CTable bordered>
                                 <CTableHead>
+                                    <CTableRow>
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={8}
+                                            color="light"
+                                        >
+                                            취소정보
+                                        </CTableHeaderCell>
+                                    </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="col">
                                             상품번호
@@ -106,6 +112,9 @@ const Cancel: NextPage = () => {
                                         <CTableHeaderCell scope="col">
                                             취소사유
                                         </CTableHeaderCell>
+                                        <CTableHeaderCell scope="col">
+                                            취소번호
+                                        </CTableHeaderCell>
                                     </CTableRow>
                                 </CTableHead>
                                 <CTableBody>
@@ -123,6 +132,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1345</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
@@ -138,6 +148,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1345</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
@@ -153,15 +164,17 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1345</CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
-                            <CTable striped>
+                            <CTable bordered>
                                 <CTableHead>
                                     <CTableRow>
                                         <CTableHeaderCell
                                             scope="col"
                                             colSpan={8}
+                                            color="light"
                                         >
                                             취소금액
                                         </CTableHeaderCell>
@@ -180,20 +193,16 @@ const Cancel: NextPage = () => {
                                         </CTableHeaderCell>
                                         <CTableDataCell>1000</CTableDataCell>
                                     </CTableRow>
-                                </CTableBody>
-                            </CTable>
-                            <CTable striped>
-                                <CTableHead>
                                     <CTableRow>
                                         <CTableHeaderCell
                                             scope="col"
                                             colSpan={8}
+                                            color="light"
                                         >
                                             변경금액
                                         </CTableHeaderCell>
                                     </CTableRow>
-                                </CTableHead>
-                                <CTableBody>
+
                                     <CTableRow>
                                         <CTableHeaderCell
                                             scope="row"
@@ -215,52 +224,61 @@ const Cancel: NextPage = () => {
                                         </CTableHeaderCell>
                                         <CTableDataCell>-0</CTableDataCell>
                                     </CTableRow>
-                                </CTableBody>
-                            </CTable>
-                            <CTable bordered>
-                                <CTableHead>
                                     <CTableRow>
-                                        <CTableHeaderCell scope="col">
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={2}
+                                            color="light"
+                                        >
                                             재계산합계
                                         </CTableHeaderCell>
-                                        <CTableHeaderCell scope="col">
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={2}
+                                        >
                                             1000
                                         </CTableHeaderCell>
                                     </CTableRow>
-                                </CTableHead>
+                                </CTableBody>
                             </CTable>
-                        </CCardBody>
-                    </CCard>
-                    <CCard className="text-center">
-                        <CCardHeader>결제 방식 : 신용카드</CCardHeader>
-                        <CCardBody>
                             <CTable bordered>
                                 <CTableBody>
                                     <CTableRow>
-                                        <CTableHeaderCell scope="row">
-                                            총 상품금액
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={2}
+                                            color="light"
+                                        >
+                                            환불
                                         </CTableHeaderCell>
-                                        <CTableDataCell>00000원</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            배송비
+                                            환불방식
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            신용카드
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            환불금액
                                         </CTableHeaderCell>
                                         <CTableDataCell>0원</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            총 할인금액
+                                            환불 금액 상세
                                         </CTableHeaderCell>
                                         <CTableDataCell>0000원</CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
                         </CCardBody>
-                        <CCardFooter className="text-medium-emphasis">
-                            최종 결제 금액 : 000000원
-                        </CCardFooter>
                     </CCard>
+
                     <CButton>수정</CButton>
                     <CButton>취소철회</CButton>
                 </CTabPane>
@@ -271,14 +289,13 @@ const Cancel: NextPage = () => {
                     visible={activeKey === 2}
                 >
                     <CCard>
-                        <CCardHeader component="h5">교환취소상품</CCardHeader>
                         <CCardBody className="text-center">
                             <CTable bordered>
                                 <CTableHead>
                                     <CTableRow>
                                         <CTableHeaderCell
                                             scope="col"
-                                            colSpan={7}
+                                            colSpan={8}
                                         >
                                             주문상품
                                         </CTableHeaderCell>
@@ -305,6 +322,9 @@ const Cancel: NextPage = () => {
                                         <CTableHeaderCell scope="col">
                                             교환사유
                                         </CTableHeaderCell>
+                                        <CTableHeaderCell scope="col">
+                                            교환번호
+                                        </CTableHeaderCell>
                                     </CTableRow>
                                 </CTableHead>
                                 <CTableBody>
@@ -322,6 +342,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1234</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
@@ -337,6 +358,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1234</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
@@ -352,6 +374,7 @@ const Cancel: NextPage = () => {
                                         <CTableDataCell>
                                             <CancelReason />
                                         </CTableDataCell>
+                                        <CTableDataCell>1234</CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
@@ -397,42 +420,50 @@ const Cancel: NextPage = () => {
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
-                        </CCardBody>
-                    </CCard>
-                    <CCard className="text-center">
-                        <CCardHeader>결제 방식 : 신용카드</CCardHeader>
-                        <CCardBody>
                             <CTable bordered>
                                 <CTableBody>
                                     <CTableRow>
-                                        <CTableHeaderCell scope="row">
-                                            총 상품금액
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={2}
+                                            color="light"
+                                        >
+                                            환불
                                         </CTableHeaderCell>
-                                        <CTableDataCell>00000원</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            배송비
+                                            환불방식
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            신용카드
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            환불금액
                                         </CTableHeaderCell>
                                         <CTableDataCell>0원</CTableDataCell>
                                     </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
-                                            총 할인금액
+                                            환불 금액 상세
                                         </CTableHeaderCell>
                                         <CTableDataCell>0000원</CTableDataCell>
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
-                        </CCardBody>
-                        <CCardFooter className="text-medium-emphasis">
-                            최종 결제 금액 : 000000원
-                        </CCardFooter>
-                    </CCard>
-                    <CCard className="text-center">
-                        <CCardBody>
                             <CTable bordered>
                                 <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell
+                                            scope="col"
+                                            colSpan={4}
+                                            color="light"
+                                        >
+                                            배송
+                                        </CTableHeaderCell>
+                                    </CTableRow>
                                     <CTableRow>
                                         <CTableHeaderCell scope="row">
                                             수령인
@@ -465,6 +496,9 @@ const Cancel: NextPage = () => {
                             </CTable>
                         </CCardBody>
                     </CCard>
+
+                    <CButton>수정</CButton>
+                    <CButton>교환철회</CButton>
                 </CTabPane>
                 {/* 반품 탭 */}
                 <CTabPane
@@ -549,9 +583,42 @@ const Cancel: NextPage = () => {
                                     </CTableRow>
                                 </CTableBody>
                             </CTable>
-                            <CButton>수정</CButton>
                         </CCardBody>
                     </CCard>
+                    <CCard className="text-center">
+                        <CCardHeader>결제 방식 : 신용카드</CCardHeader>
+                        <CCardBody>
+                            <CTable bordered>
+                                <CTableBody>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            환불방식
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>
+                                            신용카드
+                                        </CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            환불금액
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>0원</CTableDataCell>
+                                    </CTableRow>
+                                    <CTableRow>
+                                        <CTableHeaderCell scope="row">
+                                            환불 금액 상세
+                                        </CTableHeaderCell>
+                                        <CTableDataCell>0000원</CTableDataCell>
+                                    </CTableRow>
+                                </CTableBody>
+                            </CTable>
+                        </CCardBody>
+                        <CCardFooter className="text-medium-emphasis">
+                            최종 결제 금액 : 000000원
+                        </CCardFooter>
+                    </CCard>
+                    <CButton>수정</CButton>
+                    <CButton>취소철회</CButton>
                 </CTabPane>
             </CTabContent>
         </>
