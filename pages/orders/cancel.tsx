@@ -11,9 +11,6 @@ import {
     CTabPane,
     CCardBody,
     CCardFooter,
-    CContainer,
-    CRow,
-    CCol,
     CTable,
     CTableHead,
     CTableRow,
@@ -618,7 +615,7 @@ const Cancel: NextPage = () => {
                         </CCardFooter>
                     </CCard>
                     <CButton>수정</CButton>
-                    <CButton>취소철회</CButton>
+                    <CButton>반품철회</CButton>
                 </CTabPane>
             </CTabContent>
         </>
