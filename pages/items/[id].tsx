@@ -39,7 +39,7 @@ const ID: NextPage = () => {
                         <CCol xs>
                             <Image
                                 src="/pants.jpg"
-                                layout="responsive"
+                                layout="fixed"
                                 width={500}
                                 height={500}
                                 alt=""

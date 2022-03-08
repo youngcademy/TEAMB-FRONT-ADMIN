@@ -33,10 +33,7 @@ const Create: NextPage = () => {
                 <CCardBody>
                     <CForm>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 이미지 선택
                             </CFormLabel>
                             <CCol>
@@ -44,10 +41,7 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 상품명
                             </CFormLabel>
                             <CCol>
@@ -55,10 +49,7 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 브랜드
                             </CFormLabel>
                             <CCol>
@@ -66,10 +57,7 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 상품 분류
                             </CFormLabel>
                             <CCol>
@@ -82,17 +70,11 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 컬러
                             </CFormLabel>
                             <CCol>
-                                <CFormSelect
-                                    aria-label="Default select example"
-                                    className=""
-                                >
+                                <CFormSelect aria-label="Default select example">
                                     <option>컬러 목록</option>
                                     <option value="1">베이지</option>
                                     <option value="2">블랙</option>
@@ -108,10 +90,7 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 사이즈
                             </CFormLabel>
                             <CCol>
@@ -131,10 +110,7 @@ const Create: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel
-                                htmlFor="inputEmail3"
-                                className="col-sm-1 col-form-label"
-                            >
+                            <CFormLabel className="col-sm-1 col-form-label">
                                 판매 가격
                             </CFormLabel>
                             <CCol>
