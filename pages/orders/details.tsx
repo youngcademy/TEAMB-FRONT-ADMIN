@@ -133,7 +133,7 @@ const OrderDetail: NextPage = () => {
                                                 href="/orders/cancel"
                                                 passHref
                                             >
-                                                <a>취소*교환*반품 상세보기</a>
+                                                <a>취소/교환/반품 상세보기</a>
                                             </Link>
                                         </CTableDataCell>
                                         <CTableDataCell>0원</CTableDataCell>
