@@ -39,7 +39,7 @@ const ID: NextPage = () => {
                         <CCol xs>
                             <Image
                                 src="/pants.jpg"
-                                layout="fixed"
+                                layout="responsive"
                                 width={500}
                                 height={500}
                                 alt=""
@@ -50,10 +50,7 @@ const ID: NextPage = () => {
                                 <CCardBody>
                                     <CForm>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 이미지 선택
                                             </CFormLabel>
                                             <CCol>
@@ -64,10 +61,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 상품명
                                             </CFormLabel>
                                             <CCol>
@@ -75,10 +69,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 브랜드
                                             </CFormLabel>
                                             <CCol>
@@ -86,10 +77,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 상품 분류
                                             </CFormLabel>
                                             <CCol>
@@ -108,10 +96,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 컬러
                                             </CFormLabel>
                                             <CCol>
@@ -138,10 +123,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 사이즈
                                             </CFormLabel>
                                             <CCol>
@@ -168,10 +150,7 @@ const ID: NextPage = () => {
                                             </CCol>
                                         </CRow>
                                         <CRow className="mb-3">
-                                            <CFormLabel
-                                                htmlFor="inputEmail3"
-                                                className="col-sm-2 col-form-label"
-                                            >
+                                            <CFormLabel className="col-sm-2 col-form-label">
                                                 판매 가격
                                             </CFormLabel>
                                             <CCol>
