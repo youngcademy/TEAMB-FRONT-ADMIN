@@ -106,29 +106,35 @@ const List: NextPage = () => {
     return (
         <>
             <CCard className="mb-1">
-                <CCardHeader>상품 리스트</CCardHeader>
+                <CCardHeader component="h5">상품 리스트</CCardHeader>
                 <CCardBody>
                     <CForm>
                         <CRow className="mb-3">
-                            <CFormLabel className="col-sm-1 col-form-label">
-                                상품명
-                            </CFormLabel>
+                            <CCol xs={1}>
+                                <CFormLabel className="col-form-label">
+                                    상품명
+                                </CFormLabel>
+                            </CCol>
                             <CCol>
-                                <CFormInput type="text" />
+                                <CFormInput />
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel className="col-sm-1 col-form-label">
-                                브랜드
-                            </CFormLabel>
+                            <CCol xs={1}>
+                                <CFormLabel className="col-form-label">
+                                    브랜드
+                                </CFormLabel>
+                            </CCol>
                             <CCol>
-                                <CFormInput type="text" />
+                                <CFormInput />
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel className="col-sm-1 col-form-label">
-                                상품 분류
-                            </CFormLabel>
+                            <CCol xs={1}>
+                                <CFormLabel className="col-form-label">
+                                    상품 분류
+                                </CFormLabel>
+                            </CCol>
                             <CCol>
                                 <CFormSelect aria-label="Default select example">
                                     <option>선택하세요</option>
@@ -139,9 +145,11 @@ const List: NextPage = () => {
                             </CCol>
                         </CRow>
                         <CRow className="mb-3">
-                            <CFormLabel className="col-sm-1 col-form-label">
-                                판매 가격
-                            </CFormLabel>
+                            <CCol xs={1}>
+                                <CFormLabel className="col-form-label">
+                                    판매 가격
+                                </CFormLabel>
+                            </CCol>
                             <CCol>
                                 <CFormSelect aria-label="Default select example">
                                     <option>선택하세요</option>
@@ -151,7 +159,7 @@ const List: NextPage = () => {
                             </CCol>
                         </CRow>
                     </CForm>
-                    <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <div className="gap-2 d-md-flex justify-content-md-center">
                         <CButton color="primary">검색</CButton>
                         <CButton color="secondary">초기화</CButton>
                     </div>
