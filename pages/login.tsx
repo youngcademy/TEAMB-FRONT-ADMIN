@@ -28,13 +28,13 @@ import {
 import axios from 'axios';
 
 const Login: NextPage = () => {
-    const inputID = useRef(null);
-    const inputPW = useRef(null);
+    const inputID = useRef<HTMLInputElement>(null);
+    const inputPW = useRef<HTMLInputElement>(null);
     function handleClick() {
         axios
             .post('http://localhost:1234/login', {
-                userID: inputID.current.value,
-                userPW: inputPW.current.value,
+                userID: inputID?.current?.value,
+                userPW: inputPW?.current?.value,
             })
             .then(function (response) {
                 console.log(response.data.accessToken);
