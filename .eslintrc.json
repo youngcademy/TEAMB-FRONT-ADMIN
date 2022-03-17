@@ -14,5 +14,8 @@
         "next",
         "next/core-web-vitals",
         "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+        "react-hooks/rules-of-hooks": 0 // Checks rules of Hooks
+    }
 }
