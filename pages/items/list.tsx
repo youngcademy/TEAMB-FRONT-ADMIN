@@ -22,7 +22,7 @@ import {
     CTableBody,
     CTableDataCell,
 } from '@coreui/react';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 import type { NextPage } from 'next';
 
@@ -173,7 +173,6 @@ const List: NextPage = () => {
                             columns={columns}
                             pageSize={5}
                             rowsPerPageOptions={[5]}
-                            // checkboxSelection
                         />
                     </div>
                 </CCardBody>
